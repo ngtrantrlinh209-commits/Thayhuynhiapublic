@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Liên Hệ - FlootVps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animations.css">
+</head>
+<body>
+    <nav class="navbar animate-fade-up">
+        <div class="logo">FlootVps</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="services.html">Dịch vụ</a></li>
+            <li><a href="contact.html" class="active">Liên hệ</a></li> <li><a href="profile.html">Cá nhân</a></li>
+        </ul>
+        <div class="nav-tools">
+            <button onclick="toggleTheme()" style="background:none; border:1px solid var(--text-color); color:var(--text-color); width:35px; height:35px; border-radius:50%; cursor:pointer;">◑</button>
+            <a href="login.html" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">Đăng xuất</a>
+        </div>
+    </nav>
+
+    <main class="main-content animate-fade-up">
+        <h1 style="font-family: var(--font-heading); margin-bottom: 10px;">Hỗ trợ khách hàng</h1>
+        <p style="margin-bottom: 40px; opacity: 0.8;">Đội ngũ kỹ thuật của FlootVps luôn sẵn sàng hỗ trợ bạn 24/7.</p>
+
+        <div class="contact-grid">
+            <div class="card">
+                <h3 style="margin-bottom: 20px; color: var(--accent);">Gửi yêu cầu hỗ trợ</h3>
+                <form>
+                    <div class="form-group">
+                        <label>Tiêu đề</label>
+                        <input type="text" class="form-control" placeholder="Vd: Lỗi kết nối VPS..." required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nội dung chi tiết</label>
+                        <textarea class="form-control" rows="6" placeholder="Mô tả vấn đề của bạn..." required></textarea>
+                    </div>
+                    <button class="btn hover-scale" style="width: 100%;">Gửi Yêu Cầu</button>
+                </form>
+            </div>
+
+            <div>
+                <div class="card" style="margin-bottom: 30px;">
+                    <h3>Thông tin liên hệ</h3>
+                    <ul style="list-style: none; margin-top: 15px; line-height: 2.5;">
+                        <li>📍 <strong>Địa chỉ:</strong> Tòa nhà TechTower, Hà Nội, Việt Nam</li>
+                        <li>📧 <strong>Email:</strong> support@flootvps.com</li>
+                        <li>☎️ <strong>Hotline:</strong> 1900 8888</li>
+                    </ul>
+                </div>
+                <div class="map-frame">
+                    <div style="text-align: center;">
+                        <p style="font-size: 3rem;">🗺️</p>
+                        <p>Google Map API Placeholder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+        }
+        if(localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Hồ sơ cá nhân - FlootVPS</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animations.css">
+</head>
+<body>
+    <nav class="navbar animate-fade-up">
+        <a href="index.html" class="logo">FlootVPS</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="services.html">Dịch vụ</a></li>
+            <li><a href="#footer-contact">Liên hệ</a></li>
+            <li><a href="profile.html" class="active">Cá nhân</a></li>
+        </ul>
+        <div class="nav-tools">
+            <button onclick="toggleTheme()" style="background:none; border:1px solid var(--text-color); color:var(--text-color); width:35px; height:35px; border-radius:50%; cursor:pointer; font-size:1.2rem;">◑</button>
+            <a href="login.html" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">Đăng xuất</a>
+        </div>
+    </nav>
+
+    <main class="main-content animate-fade-up">
+        <div class="container-limit" style="padding-top: 40px;">
+            <h1 style="font-family: var(--font-heading); margin-bottom: 40px;">Quản lý tài khoản</h1>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                <div class="card">
+                    <div style="display: flex; align-items: center; margin-bottom: 30px;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--accent), #a29bfe); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; margin-right: 20px; font-weight: bold; box-shadow: var(--shadow);">FP</div>
+                        <div>
+                            <h2 style="margin-bottom: 5px;">HocSinhLop8Vip</h2>
+                            <p style="font-size: 1rem; opacity: 0.7;">Thành viên Hạng Vàng 🏆</p>
+                        </div>
+                    </div>
+                    
+                    <p style="margin-bottom: 15px; font-size: 1.1rem;">📧 Email: <strong>student@example.com</strong></p>
+                    <p style="margin-bottom: 15px; font-size: 1.1rem;">📅 Ngày tham gia: <strong>01/01/2026</strong></p>
+                    <hr style="border-color: var(--border); margin: 30px 0;">
+
+                    <div style="padding: 25px; background: linear-gradient(135deg, var(--accent) 0%, #6c5ce7 100%); color: white; border-radius: 16px; margin-bottom: 25px; box-shadow: 0 10px 20px rgba(9, 132, 227, 0.3); position: relative; overflow: hidden;">
+                        <div style="position: relative; z-index: 2;">
+                             <p style="font-size: 1rem; opacity: 0.9;">Số dư khả dụng:</p>
+                            <h2 style="font-size: 3rem; margin: 10px 0;">150,000 đ</h2>
+                        </div>
+                        <div style="position: absolute; right: -20px; top: -20px; font-size: 8rem; opacity: 0.1;">💰</div>
+                    </div>
+
+                    <div style="display: flex; gap: 20px;">
+                        <button class="btn hover-scale" style="background: #27ae60; flex: 1; padding: 15px; font-size: 1.1rem;">+ Nạp Tiền Ngay</button>
+                        <button class="btn hover-scale" style="background: transparent; border: 2px solid var(--text-color); color: var(--text-color); flex: 1; padding: 15px; font-size: 1.1rem;">Lịch sử giao dịch</button>
+                    </div>
+                </div>
+
+                <div>
+                     <div class="card" style="margin-bottom: 30px; background: rgba(39, 174, 96, 0.1); border: 1px solid #27ae60;">
+                        <h3 style="color: #27ae60; margin-bottom: 15px;">✅ VPS Đang Hoạt Động</h3>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <strong>FLOOT-2 PRO</strong> (IP: 103.45.xxx.xxx)
+                                <p style="font-size: 0.9rem; opacity: 0.8;">Hết hạn: 25/02/2026</p>
+                            </div>
+                            <button class="btn" style="padding: 8px 15px; font-size: 0.9rem;">Quản lý</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="margin-bottom: 20px;">💬 Đánh giá từ cộng đồng</h3>
+                        <div style="max-height: 400px; overflow-y: auto; padding-right: 10px;">
+                            <div style="margin-bottom: 25px; border-bottom: 1px solid var(--border); padding-bottom: 20px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                    <strong>Nguyễn Văn A</strong>
+                                    <span style="color: gold;">⭐⭐⭐⭐⭐</span>
+                                </div>
+                                <p style="font-size: 0.95rem; opacity: 0.8; line-height: 1.6;">"Giao diện web mới nhìn xịn quá, VPS chạy mượt mà không lag tí nào! Support 10 điểm."</p>
+                            </div>
+                            <div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                    <strong>Le C</strong>
+                                    <span style="color: gold;">⭐⭐⭐⭐⭐</span>
+                                </div>
+                                <p style="font-size: 0.95rem; opacity: 0.8; line-height: 1.6;">"Thích nhất cái Dark mode và cái logo mới nhìn rất uy tín. Giá lại rẻ cho học sinh."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer animate-fade-up" id="footer-contact">
+        <div class="footer-grid container-limit">
+            <div class="footer-col">
+                <a href="index.html" class="logo" style="font-size: 1.8rem;">FlootVPS</a>
+                <p style="margin-top: 20px; opacity: 0.8;">Hệ thống cung cấp VPS tự động số 1 Việt Nam.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Liên hệ</h3>
+                <ul>
+                    <li>☎️ Hotline: 0909.888.xxx</li>
+                    <li>📧 Email: admin@flootvps.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">&copy; 2026 FlootVPS.</div>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+        }
+        if(localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
+    </script>
+</body>
+</html>
