@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>FlootVPS - Giải Pháp Máy Chủ Ảo Toàn Diện</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animations.css">
+</head>
+<body>
+    <nav class="navbar animate-fade-up">
+        <div style="padding: 0 5%; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" class="logo">FlootVPS.</a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Trang chủ</a></li>
+                <li><a href="services.html">Dịch vụ</a></li>
+                <li><a href="#footer-contact">Liên hệ</a></li>
+                <li><a href="profile.html">Tài khoản</a></li>
+            </ul>
+
+            <div style="display: flex; gap: 15px; align-items: center;">
+                <button onclick="toggleTheme()" style="background:none; border:none; color:var(--text-color); cursor:pointer; font-size: 1.2rem;">◑</button>
+                <a href="login.html" class="btn" style="padding: 8px 16px;">Đăng xuất</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="slider-container animate-fade-up">
+        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef526b0042a0?auto=format&fit=crop&w=1920&q=80');">
+            <div class="slide-content">
+                <h1 class="slide-title">Hạ Tầng Điện Toán Đám Mây Mạnh Mẽ</h1>
+                <p class="slide-desc">Cung cấp giải pháp VPS hiệu năng cao với chi phí tối ưu cho Doanh nghiệp và Cá nhân.</p>
+                <button class="btn" onclick="scrollToId('vps-list')">Xem Bảng Giá</button>
+                <button class="btn btn-outline" onclick="scrollToId('vps-info')">Tìm Hiểu Thêm</button>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80');">
+            <div class="slide-content">
+                <h1 class="slide-title">An Toàn - Bảo Mật - Ổn Định</h1>
+                <p class="slide-desc">Hệ thống Anti-DDoS chuyên dụng và cam kết Uptime 99.9%.</p>
+                <button class="btn" onclick="scrollToId('vps-list')">Đăng Ký Ngay</button>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80');">
+            <div class="slide-content">
+                <h1 class="slide-title">Hỗ Trợ Kỹ Thuật 24/7</h1>
+                <p class="slide-desc">Đội ngũ chuyên gia luôn sẵn sàng giải quyết mọi vấn đề của bạn.</p>
+                <button class="btn" onclick="scrollToId('footer-contact')">Liên Hệ</button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        
+        <section id="vps-info" class="section-padding">
+            <div class="info-grid">
+                <div class="info-text">
+                    <h3>VPS là gì?</h3>
+                    <p style="margin-bottom: 20px; opacity: 0.8;">
+                        VPS (Virtual Private Server) là máy chủ ảo được tạo ra bằng phương pháp phân chia một máy chủ vật lý thành nhiều máy chủ khác nhau. Mỗi VPS hoạt động hoàn toàn như một máy chủ riêng biệt với CPU, RAM và ổ cứng riêng.
+                    </p>
+                    <h3>Tại sao chọn FlootVPS?</h3>
+                    <ul style="opacity: 0.8;">
+                        <li>✅ <strong>Hiệu suất cao:</strong> Sử dụng 100% ổ cứng NVMe.</li>
+                        <li>✅ <strong>Toàn quyền quản trị:</strong> Bạn có quyền Root/Administrator cao nhất.</li>
+                        <li>✅ <strong>Triển khai tức thì:</strong> Hệ thống tự động cài đặt trong 30 giây.</li>
+                    </ul>
+                </div>
+                    <div class="info-img">
+                        <img src="./assets/3d150b5bde2b2e7567270de7a09a4d9d.png" alt="Giao diện quản lý VPS FlootVPS" style="width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vps-list" class="section-padding" style="background: rgba(0,0,0,0.02);">
+            <h2 class="section-title">Các Gói Cấu Hình Đề Xuất</h2>
+            <div class="grid-vps" id="vps-render-area">
+                </div>
+        </section>
+
+    </main>
+
+    <footer id="footer-contact" class="footer">
+        <div class="footer-grid">
+            <div>
+                <div class="logo" style="margin-bottom: 20px;">FlootVPS.</div>
+                <p style="opacity: 0.7;">Đối tác tin cậy cung cấp hạ tầng số cho sự phát triển của bạn.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px; font-weight: 600;">Liên kết</h4>
+                <ul style="list-style: none; opacity: 0.8; line-height: 2;">
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Điều khoản dịch vụ</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px; font-weight: 600;">Liên hệ</h4>
+                <ul style="list-style: none; opacity: 0.8; line-height: 2;">
+                    <li>🏢 TechTower Building, Hà Nội</li>
+                    <li>📧 support@flootvps.com</li>
+                    <li>📞 1900 123 456</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 FlootVPS. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. SLIDER LOGIC ---
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) slide.classList.add('active');
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Tự động chuyển slide mỗi 4 giây
+        setInterval(nextSlide, 4000);
+
+        // --- 2. RENDER VPS LOGIC ---
+        const vpsContainer = document.getElementById('vps-render-area');
+        const prices = [100000, 250000, 500000, 1000000, 2000000, 3500000, 5000000, 6500000, 8000000, 10000000];
+        
+        for (let i = 1; i <= 10; i++) {
+            let html = `
+                <div class="card">
+                    <div class="vps-img-box">🖥️</div>
+                    <h3 style="color: var(--accent); font-size: 1.2rem; margin-bottom: 5px;">Business VPS ${i}</h3>
+                    <p style="font-size: 0.9rem; opacity: 0.6; margin-bottom: 15px;">Phù hợp cho Website & Database</p>
+                    
+                    <ul style="list-style: none; margin-bottom: 20px; font-size: 0.95rem; opacity: 0.8;">
+                        <li style="margin-bottom: 8px;">• <strong>${i} Core</strong> CPU Processor</li>
+                        <li style="margin-bottom: 8px;">• <strong>${i * 2} GB</strong> RAM DDR4</li>
+                        <li style="margin-bottom: 8px;">• <strong>${i * 25} GB</strong> SSD NVMe</li>
+                        <li>• Băng thông không giới hạn</li>
+                    </ul>
+
+                    <div style="margin-top: auto; border-top: 1px solid var(--border); padding-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                        <strong style="font-size: 1.1rem;">${prices[i-1].toLocaleString('vi-VN')} đ<span style="font-size: 0.8rem; font-weight: normal">/tháng</span></strong>
+                        <a href="checkout.html?model=${i}&price=${prices[i-1]}" class="btn">Mua Ngay</a>
+                    </div>
+                </div>
+            `;
+            vpsContainer.innerHTML += html;
+        }
+
+        // --- 3. SCROLL FUNCTION ---
+        function scrollToId(id) {
+            document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+        }
+
+        // --- 4. THEME TOGGLE ---
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+        }
+        if(localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
+    </script>
+</body>
+</html>

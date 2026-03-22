@@ -1,0 +1,129 @@
+/* css/style.css - V5.2 Updated Logo Size */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --bg-color: #F7F9FC;
+    --glass-bg: rgba(255, 255, 255, 0.95);
+    --text-color: #1A202C;
+    --accent: #2563EB;
+    --accent-hover: #1D4ED8;
+    --border: #E2E8F0;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --font-main: 'Inter', sans-serif;
+    /* Tăng chiều cao Navbar lên để chứa logo to */
+    --nav-height: 85px; 
+}
+
+body.dark-mode {
+    --bg-color: #0F172A;
+    --glass-bg: rgba(30, 41, 59, 0.95);
+    --text-color: #F1F5F9;
+    --accent: #3B82F6;
+    --accent-hover: #60A5FA;
+    --border: #334155;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; transition: all 0.3s ease; scroll-behavior: smooth; outline: none; }
+body { font-family: var(--font-main); background: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+
+/* --- NAVBAR --- */
+.navbar {
+    position: fixed; top: 0; left: 0; width: 100%; height: var(--nav-height);
+    background: var(--glass-bg); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%; z-index: 1000;
+}
+
+/* --- LOGO SETTINGS (CHỈNH SỬA KÍCH THƯỚC) --- */
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Kích thước Logo trên Navbar */
+.navbar .logo img {
+    height: 65px; /* Chiều cao logo to */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Kích thước Logo dưới Footer */
+.footer .logo img {
+    height: 90px; /* Chiều cao logo dưới footer to hơn */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.08); /* Zoom nhẹ khi di chuột */
+}
+
+/* --- END LOGO SETTINGS --- */
+
+.nav-links { display: flex; list-style: none; gap: 30px; }
+.nav-links a { font-weight: 500; font-size: 0.95rem; color: var(--text-color); opacity: 0.8; }
+.nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--accent); }
+
+.slider-container {
+    position: relative; width: 100%; height: 500px; overflow: hidden;
+    margin-top: var(--nav-height); background: #000;
+}
+
+.slide {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    opacity: 0; transition: opacity 1s ease-in-out;
+    display: flex; align-items: center; justify-content: center;
+    background-size: cover; background-position: center;
+}
+.slide.active { opacity: 1; }
+.slide::before { content: ''; position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5); }
+
+.slide-content {
+    position: relative; z-index: 2; text-align: center; color: white; padding: 20px; max-width: 800px;
+}
+.slide-title { font-size: 3rem; font-weight: 800; margin-bottom: 15px; line-height: 1.2; }
+.slide-desc { font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9; }
+
+.section-padding { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+.section-title { font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 40px; color: var(--text-color); }
+
+.info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.info-text h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--accent); }
+.info-text ul { padding-left: 20px; margin-bottom: 20px; }
+.info-text li { margin-bottom: 10px; }
+
+.grid-vps { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+.card {
+    background: var(--glass-bg); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px; box-shadow: var(--shadow);
+    display: flex; flex-direction: column;
+}
+.card:hover { transform: translateY(-5px); border-color: var(--accent); }
+
+.vps-img-box {
+    height: 160px; background: #e2e8f0; border-radius: 8px; margin-bottom: 20px;
+    display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #94a3b8;
+}
+
+.btn {
+    padding: 12px 24px; border-radius: 6px; font-weight: 600; cursor: pointer; border: none;
+    background: var(--accent); color: white; display: inline-block; font-size: 0.95rem;
+}
+.btn:hover { background: var(--accent-hover); }
+.btn-outline { background: transparent; border: 2px solid white; color: white; }
+.btn-outline:hover { background: white; color: black; }
+
+.footer {
+    background: var(--glass-bg); border-top: 1px solid var(--border);
+    padding: 60px 0 20px 0; margin-top: auto;
+    scroll-margin-top: 85px; /* Cập nhật để không bị che bởi nav cao hơn */
+}
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; padding: 0 5%; }
+.copyright { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 0.85rem; color: #64748b; }
